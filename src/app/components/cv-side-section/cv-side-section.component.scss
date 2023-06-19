@@ -1,4 +1,14 @@
 .container {
   background-color: #fffafa;
   color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .border {
+    width: 90%;
+    height: 1px;
+    background-color: rgb(189, 189, 189);
+    margin: 30px;
+  }
 }

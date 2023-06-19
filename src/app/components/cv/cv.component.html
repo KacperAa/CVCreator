@@ -6,4 +6,7 @@
   *ngFor="let section of cvSections"
   [data]="section"
 ></app-cv-section>
-<app-cv-side-section [data]="cvSideSection"></app-cv-side-section>
+<app-cv-side-section
+  *ngFor="let cvSideSection of cvSideSections"
+  [data]="cvSideSection"
+></app-cv-side-section>

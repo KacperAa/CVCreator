@@ -8,9 +8,5 @@
   </div>
 
   <div class="border"></div>
-  <div class="list">
-    <li *ngFor="let subPoint of data.subPoints" class="list-item">
-      <mat-icon>task_alt</mat-icon>{{ subPoint }}
-    </li>
-  </div>
+  <ui-list [points]="data.subPoints"></ui-list>
 </section>

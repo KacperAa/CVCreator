@@ -16,6 +16,7 @@ import { MatListModule } from '@angular/material/list';
 import { CvSummaryComponent } from './components/cv/cv-summary/cv-summary.component';
 import { TitleAndIconComponent } from './UI/atoms/title-and-icon/title-and-icon.atom';
 import { CvSideSectionComponent } from './components/cv-side-section/cv-side-section.component';
+import { ListComponent } from './UI/atoms/list/list.atom';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CvSideSectionComponent } from './components/cv-side-section/cv-side-sec
     CvSummaryComponent,
     TitleAndIconComponent,
     CvSideSectionComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,

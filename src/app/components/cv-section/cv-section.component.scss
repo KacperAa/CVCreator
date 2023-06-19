@@ -20,19 +20,4 @@
     background-color: rgb(189, 189, 189);
     margin: 30px;
   }
-
-  .list {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-bottom: 50px;
-
-    .list-item {
-      list-style-type: none;
-      display: flex;
-      gap: 5px;
-      font-size: 13px;
-    }
-  }
 }
