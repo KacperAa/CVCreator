@@ -27,7 +27,22 @@ export class CvComponent {
   public cvSections: CvSection[] = [
     {
       iconsSrc: ['assets/angular.png'],
-      subPoints: ['RxJs', 'Reactive forms'],
+      subPoints: [
+        'Reactive forms',
+        'Atomic design',
+        'Component communication',
+        'Angular material',
+        'RxJs',
+        'Pipes',
+        'Reużywalność',
+        'Lifecycle hooks',
+        'Services',
+        'Routing module',
+        'HTTP module',
+        'Angular animations',
+        'Ngx-Charts',
+        'Directives',
+      ],
     },
     {
       iconsSrc: [

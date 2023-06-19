@@ -1,13 +1,14 @@
-<button mat-raised-button color="accent">Export to pdf</button>
-
-<app-cv-header [headerData]="cvHeader"> </app-cv-header>
-<app-cv-summary [text]="summaryText"></app-cv-summary>
-<app-cv-section
-  *ngFor="let section of cvSections"
-  [data]="section"
-></app-cv-section>
-<app-cv-side-section
-  *ngFor="let cvSideSection of cvSideSections"
-  [data]="cvSideSection"
-></app-cv-side-section>
-<app-test></app-test>
+<div class="container">
+  <button mat-raised-button color="accent">Export to pdf</button>
+  <app-cv-header [headerData]="cvHeader"> </app-cv-header>
+  <app-cv-summary [text]="summaryText"></app-cv-summary>
+  <app-cv-section
+    *ngFor="let section of cvSections"
+    [data]="section"
+  ></app-cv-section>
+  <app-cv-side-section
+    *ngFor="let cvSideSection of cvSideSections"
+    [data]="cvSideSection"
+  ></app-cv-side-section>
+  <app-test></app-test>
+</div>
