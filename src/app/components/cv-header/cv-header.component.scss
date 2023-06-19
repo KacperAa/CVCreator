@@ -24,6 +24,8 @@
   .profile-image {
     width: 130px;
     height: 180px;
+    border: 1px solid white;
+    border-radius: 10px;
   }
 }
 
@@ -31,8 +33,9 @@
   content: "";
   position: absolute;
   background-image: url("angular.png");
-  background-size: 100px;
+  background-size: 300px;
   inset: 0;
   background-repeat: no-repeat;
   background-position: 63% 20px;
+  opacity: 0.5;
 }
