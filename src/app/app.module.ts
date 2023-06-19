@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { CvHeaderComponent } from './components/cv-header/cv-header.component';
 import { LargeSmallTextComponent } from './UI/atoms/large-small-text/large-small-text.atom';
 import { EmailAndTelComponent } from './components/email-and-tel/email-and-tel.component';
+import { CvSectionComponent } from './components/cv-section/cv-section.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { EmailAndTelComponent } from './components/email-and-tel/email-and-tel.c
     CvHeaderComponent,
     LargeSmallTextComponent,
     EmailAndTelComponent,
+    CvSectionComponent,
   ],
   imports: [
     BrowserModule,

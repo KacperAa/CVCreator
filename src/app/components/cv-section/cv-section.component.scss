@@ -1,0 +1,12 @@
+.container {
+  background-color: white;
+  color: gray;
+
+  .icons-box {
+    display: flex;
+    justify-content: center;
+    &__icon {
+      width: 100px;
+    }
+  }
+}

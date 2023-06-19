@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CvHeader } from 'src/app/interfaces/cv-header.interface';
+import { CvSection } from 'src/app/interfaces/cv-section.interface';
 
 @Component({
   selector: 'app-cv',
@@ -13,5 +14,10 @@ export class CvComponent {
     email: 'kacperaugvstyn@gmail.com',
     tel: '536 822 618',
     imgSrc: '/assets/profile-img.png',
+  };
+
+  public cvSection: CvSection = {
+    iconsSrc: ['assets/angular.png'],
+    subPoints: ['RxJs', 'Reactive forms'],
   };
 }
