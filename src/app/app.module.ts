@@ -11,6 +11,8 @@ import { CvHeaderComponent } from './components/cv-header/cv-header.component';
 import { LargeSmallTextComponent } from './UI/atoms/large-small-text/large-small-text.atom';
 import { EmailAndTelComponent } from './components/email-and-tel/email-and-tel.component';
 import { CvSectionComponent } from './components/cv-section/cv-section.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { CvSectionComponent } from './components/cv-section/cv-section.component
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatIconModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

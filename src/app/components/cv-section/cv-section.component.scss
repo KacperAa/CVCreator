@@ -1,12 +1,40 @@
 .container {
-  background-color: white;
+  background-color: #fffafa;
   color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .icons-box {
     display: flex;
     justify-content: center;
+
     &__icon {
       width: 100px;
     }
+  }
+
+  .border {
+    width: 90%;
+    height: 1px;
+    background-color: rgb(189, 189, 189);
+  }
+
+  .list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .list-item {
+      list-style-type: none;
+      display: flex;
+      gap: 5px;
+      font-size: 13px;
+    }
+  }
+
+  mat-list-item span {
+    color: red;
   }
 }
