@@ -8,6 +8,8 @@ import { CvComponent } from './components/cv/cv.component';
 import { CvEditorComponent } from './components/cv-editor/cv-editor.component';
 import { MatButtonModule } from '@angular/material/button';
 import { CvHeaderComponent } from './components/cv-header/cv-header.component';
+import { LargeSmallTextComponent } from './UI/atoms/large-small-text/large-small-text.atom';
+import { EmailAndTelComponent } from './components/email-and-tel/email-and-tel.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { CvHeaderComponent } from './components/cv-header/cv-header.component';
     CvComponent,
     CvEditorComponent,
     CvHeaderComponent,
+    LargeSmallTextComponent,
+    EmailAndTelComponent,
   ],
   imports: [
     BrowserModule,
