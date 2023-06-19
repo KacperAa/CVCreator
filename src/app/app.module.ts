@@ -17,6 +17,7 @@ import { CvSummaryComponent } from './components/cv/cv-summary/cv-summary.compon
 import { TitleAndIconComponent } from './UI/atoms/title-and-icon/title-and-icon.atom';
 import { CvSideSectionComponent } from './components/cv-side-section/cv-side-section.component';
 import { ListComponent } from './UI/atoms/list/list.atom';
+import { TestComponent } from './components/cv/test/test.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ListComponent } from './UI/atoms/list/list.atom';
     TitleAndIconComponent,
     CvSideSectionComponent,
     ListComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
