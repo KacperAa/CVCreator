@@ -1,0 +1,15 @@
+.container {
+  background-color: #fffafa;
+  color: gray;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+
+  .border {
+    width: 90%;
+    height: 1px;
+    background-color: rgb(189, 189, 189);
+    margin: 30px;
+  }
+}

@@ -16,8 +16,22 @@ export class CvComponent {
     imgSrc: '/assets/profile-img.png',
   };
 
-  public cvSection: CvSection = {
-    iconsSrc: ['assets/angular.png'],
-    subPoints: ['RxJs', 'Reactive forms'],
-  };
+  public cvSection: CvSection[] = [
+    {
+      iconsSrc: ['assets/angular.png'],
+      subPoints: ['RxJs', 'Reactive forms'],
+    },
+    {
+      iconsSrc: [
+        'assets/html-logo.png',
+        'assets/typeScript.svg',
+        'assets/css.png',
+      ],
+      subPoints: ['RxJs', 'Reactive forms'],
+    },
+    {
+      iconsSrc: ['assets/git.png'],
+      subPoints: ['RxJs', 'Reactive forms'],
+    },
+  ];
 }
