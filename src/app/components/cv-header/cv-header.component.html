@@ -1,0 +1,16 @@
+<section class="container">
+  <div class="text-and-image-box">
+    <div class="text-box">
+      <div class="name-and-workplace">
+        <h1 class="name-and-workplace__name">{{ headerData.nickname }}</h1>
+        <span>{{ headerData.workplace }}</span>
+      </div>
+
+      <div class="email-and-telephone-number-box">
+        <span>{{ headerData.email }}</span>
+        <span>tel. {{ headerData.tel }}</span>
+      </div>
+    </div>
+    <img class="profile-image" [src]="headerData.imgSrc" />
+  </div>
+</section>
