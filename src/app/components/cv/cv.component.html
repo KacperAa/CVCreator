@@ -1,8 +1,9 @@
 <button mat-raised-button color="accent">Export to pdf</button>
 
 <app-cv-header [headerData]="cvHeader"> </app-cv-header>
-<app-cv-summary></app-cv-summary>
+<app-cv-summary [text]="summaryText"></app-cv-summary>
 <app-cv-section
-  *ngFor="let section of cvSection"
+  *ngFor="let section of cvSections"
   [data]="section"
 ></app-cv-section>
+<app-cv-side-section [data]="cvSideSection"></app-cv-side-section>

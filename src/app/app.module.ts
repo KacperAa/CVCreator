@@ -14,6 +14,8 @@ import { CvSectionComponent } from './components/cv-section/cv-section.component
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { CvSummaryComponent } from './components/cv/cv-summary/cv-summary.component';
+import { TitleAndIconComponent } from './UI/atoms/title-and-icon/title-and-icon.atom';
+import { CvSideSectionComponent } from './components/cv-side-section/cv-side-section.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { CvSummaryComponent } from './components/cv/cv-summary/cv-summary.compon
     EmailAndTelComponent,
     CvSectionComponent,
     CvSummaryComponent,
+    TitleAndIconComponent,
+    CvSideSectionComponent,
   ],
   imports: [
     BrowserModule,

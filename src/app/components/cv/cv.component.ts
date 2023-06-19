@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CvHeader } from 'src/app/interfaces/cv-header.interface';
 import { CvSection } from 'src/app/interfaces/cv-section.interface';
+import { CvSideSection } from 'src/app/interfaces/cv-side-section.interface';
+import { LargeSmallText } from 'src/app/interfaces/large-small-text.interface';
 
 @Component({
   selector: 'app-cv',
@@ -16,7 +18,13 @@ export class CvComponent {
     imgSrc: '/assets/profile-img.png',
   };
 
-  public cvSection: CvSection[] = [
+  public summaryText: LargeSmallText = {
+    largeText: 'Podsumowanie',
+    smallText:
+      'Jestem osobą, która aktywnie rozwija swoje zainteresowanie, jakim jest programowanie front endowe. Cechuję się nieustanną chęcią rozwoju jako programista i wykorzystuję każdą okazję, aby nauczyć się czegoś nowego. Pragnę wykorzystać swoje umiejętności, aby wspomóc zespół programistów Państwa firmy.',
+  };
+
+  public cvSections: CvSection[] = [
     {
       iconsSrc: ['assets/angular.png'],
       subPoints: ['RxJs', 'Reactive forms'],
@@ -34,4 +42,10 @@ export class CvComponent {
       subPoints: ['RxJs', 'Reactive forms'],
     },
   ];
+
+  public cvSideSection: CvSideSection = {
+    title: 'Pozostałe umiejętności',
+    iconName: 'star',
+    listItem: [],
+  };
 }
