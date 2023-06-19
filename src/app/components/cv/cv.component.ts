@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { CV_HEADER } from 'src/app/DATA/CV_HEADER';
+import { CV_SECTIONS } from 'src/app/DATA/CV_SECTIONS';
+import { CV_SIDE_SECTIONS } from 'src/app/DATA/CV_SIDE_SECTIONS';
+import { SUMMARY_TEXT } from 'src/app/DATA/SUMMARY_TEXT';
 import { CvHeader } from 'src/app/interfaces/cv-header.interface';
 import { CvSection } from 'src/app/interfaces/cv-section.interface';
 import { CvSideSection } from 'src/app/interfaces/cv-side-section.interface';
@@ -10,79 +14,8 @@ import { LargeSmallText } from 'src/app/interfaces/large-small-text.interface';
   styleUrls: ['./cv.component.scss'],
 })
 export class CvComponent {
-  public cvHeader: CvHeader = {
-    nickname: 'Kacper Augustyn',
-    workplace: 'Junior Angular Developer',
-    email: 'kacperaugvstyn@gmail.com',
-    tel: '536 822 618',
-    imgSrc: '/assets/profile-img.png',
-  };
-
-  public summaryText: LargeSmallText = {
-    largeText: 'Podsumowanie',
-    smallText:
-      'Jestem osobą, która aktywnie rozwija swoje zainteresowanie, jakim jest programowanie front endowe. Cechuję się nieustanną chęcią rozwoju jako programista i wykorzystuję każdą okazję, aby nauczyć się czegoś nowego. Pragnę wykorzystać swoje umiejętności, aby wspomóc zespół programistów Państwa firmy.',
-  };
-
-  public cvSections: CvSection[] = [
-    {
-      iconsSrc: ['assets/angular.png'],
-      subPoints: [
-        'Reactive forms',
-        'Atomic design',
-        'Component communication',
-        'Angular material',
-        'RxJs',
-        'Pipes',
-        'Reużywalność',
-        'Lifecycle hooks',
-        'Services',
-        'Routing module',
-        'HTTP module',
-        'Angular animations',
-        'Ngx-Charts',
-        'Directives',
-      ],
-    },
-    {
-      iconsSrc: [
-        'assets/html-logo.png',
-        'assets/typeScript.svg',
-        'assets/css.png',
-      ],
-      subPoints: ['RxJs', 'Reactive forms'],
-    },
-    {
-      iconsSrc: ['assets/git.png'],
-      subPoints: ['RxJs', 'Reactive forms'],
-    },
-  ];
-
-  public cvSideSections: CvSideSection[] = [
-    {
-      title: 'Pozostałe umiejętności',
-      iconName: 'star',
-      listItem: ['Angielski - B1'],
-    },
-    {
-      title: 'Wykształcenie',
-      iconName: 'school',
-      listItem: ['Angielski - B1'],
-    },
-    {
-      title: 'Doświadczenie',
-      iconName: 'workspace_premium',
-      listItem: ['Angielski - B1'],
-    },
-    {
-      title: 'Kursy',
-      iconName: 'book',
-      listItem: ['Angielski - B1'],
-    },
-    {
-      title: 'Zainteresowania',
-      iconName: 'hiking',
-      listItem: ['Angielski - B1'],
-    },
-  ];
+  public cvHeader: CvHeader = CV_HEADER;
+  public summaryText: LargeSmallText = SUMMARY_TEXT;
+  public cvSections: CvSection[] = CV_SECTIONS;
+  public cvSideSections: CvSideSection[] = CV_SIDE_SECTIONS;
 }
