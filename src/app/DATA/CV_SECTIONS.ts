@@ -19,6 +19,8 @@ export const CV_SECTIONS: CvSection[] = [
       'Angular animations',
       'Ngx-Charts',
       'Directives',
+      'State(nxgs/ngrx/angular state)',
+      'Programowanie obiektowe',
     ],
   },
   {
@@ -27,10 +29,20 @@ export const CV_SECTIONS: CvSection[] = [
       'assets/typeScript.svg',
       'assets/css.png',
     ],
-    subPoints: ['RxJs', 'Reactive forms'],
+    subPoints: [
+      'TypeScript',
+      'HTML 5',
+      'CSS',
+      'SCSS',
+      'Tworzenie responsywnych stron',
+      'BEM',
+      'Tworzenie typów',
+      'Tworzenie interfejsów',
+      'Generics class/interface',
+    ],
   },
   {
     iconsSrc: ['assets/git.png'],
-    subPoints: ['RxJs', 'Reactive forms'],
+    subPoints: ['Push/pull'],
   },
 ];
