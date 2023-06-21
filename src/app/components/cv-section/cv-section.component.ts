@@ -11,6 +11,7 @@ export class CvSectionComponent {
   public data!: CvSection;
   @Input()
   public iconsSrc!: string[];
-  @Input()
-  public subPoints!: string[];
+  public get columnsKeys(): string[] {
+    return Object.keys(this.data.subPoints);
+  }
 }

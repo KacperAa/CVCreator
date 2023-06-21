@@ -1,4 +1,8 @@
 export interface CvSection {
   iconsSrc: string[];
-  subPoints: string[];
+  subPoints: SubPoints;
+}
+
+export interface SubPoints {
+  [key: string]: string[];
 }

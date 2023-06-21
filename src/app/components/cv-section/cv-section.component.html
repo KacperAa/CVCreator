@@ -8,5 +8,12 @@
   </div>
 
   <div class="border"></div>
-  <ui-list [points]="data.subPoints"></ui-list>
+  <div class="lists-box">
+    <ng-container *ngFor="let key of columnsKeys">
+      <ui-list
+        [subPointWidth]="'170px'"
+        [points]="data.subPoints[key]"
+      ></ui-list>
+    </ng-container>
+  </div>
 </section>

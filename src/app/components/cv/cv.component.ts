@@ -1,4 +1,4 @@
-import { Component,  } from '@angular/core';
+import { Component } from '@angular/core';
 import { CV_HEADER } from 'src/app/DATA/CV_HEADER';
 import { CV_SECTIONS } from 'src/app/DATA/CV_SECTIONS';
 import { CV_SIDE_SECTIONS } from 'src/app/DATA/CV_SIDE_SECTIONS';
@@ -27,23 +27,23 @@ export class CvComponent {
       .then((canvas: HTMLCanvasElement) => {
         const fileWidth = 218.2;
         const fileHeight = (canvas.height * fileWidth) / canvas.width;
-        const FILEURI = canvas.toDataURL('image/jpeg'); // Zmiana formatu obrazu na JPEG
-        const PDF = new jsPDF('p', 'mm', [210, fileHeight + 10]); // Zmniejszenie wysokości strony PDF
+        const toJpeg = canvas.toDataURL('image/jpeg'); // JPEG format
+        const pdf = new jsPDF('p', 'mm', [210, fileHeight + 10]); // Page height reduction
         let position = 0;
-        const pageHeight = PDF.internal.pageSize.getHeight();
+        /* const pageHeight = pdf.internal.pageSize.getHeight(); */
+        /* 
+        const totalPages = Math.ceil(fileHeight / pageHeight); */
 
-        const totalPages = Math.ceil(fileHeight / pageHeight);
-
-        for (let pageNumber = 0; pageNumber < totalPages; pageNumber++) {
+        /*    for (let pageNumber = 0; pageNumber < totalPages; pageNumber++) {
           if (pageNumber > 0) {
-            PDF.addPage();
-          }
-          position = -pageNumber * pageHeight;
+            pdf.addPage();
+          } */
+        /*  position = -pageNumber * pageHeight; */
 
-          PDF.addImage(FILEURI, 'JPEG', 0, position, fileWidth, fileHeight);
-        }
+        pdf.addImage(toJpeg, 'JPEG', 0, position, fileWidth, fileHeight);
+        /*  } */
 
-        PDF.save('cv.pdf');
+        pdf.save('cv.pdf');
       });
   }
 }

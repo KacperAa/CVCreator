@@ -8,4 +8,6 @@ import { Component, Input } from '@angular/core';
 export class ListComponent {
   @Input({ required: true })
   public points!: string[];
+  @Input({ required: false })
+  public subPointWidth!: string;
 }
