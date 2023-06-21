@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component,  } from '@angular/core';
 import { CV_HEADER } from 'src/app/DATA/CV_HEADER';
 import { CV_SECTIONS } from 'src/app/DATA/CV_SECTIONS';
 import { CV_SIDE_SECTIONS } from 'src/app/DATA/CV_SIDE_SECTIONS';
