@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { CV_HEADER } from 'src/app/DATA/CV_HEADER';
 import { CV_SECTIONS } from 'src/app/DATA/CV_SECTIONS';
-import { CV_SIDE_SECTIONS } from 'src/app/DATA/CV_SIDE_SECTIONS';
+import { CV_SIDE_SECTION_COLLECTION } from 'src/app/DATA/CV_SIDE_SECTIONS_COLLECTION';
 import { CvHeader } from 'src/app/interfaces/cv-header.interface';
 import { CvSection } from 'src/app/interfaces/cv-section.interface';
-import { CvSideSection } from 'src/app/interfaces/cv-side-section.interface';
+import { CvSideSectionGroup } from 'src/app/interfaces/cv-side-section.group.interface';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import { SUMMARY_TEXT } from 'src/app/DATA/SUMMARY_TEXT';
@@ -18,7 +18,7 @@ export class CvComponent {
   public cvHeader: CvHeader = CV_HEADER;
   public summaryText: string = SUMMARY_TEXT;
   public cvSections: CvSection[] = CV_SECTIONS;
-  public cvSideSections: CvSideSection[] = CV_SIDE_SECTIONS;
+  public cvSideSections: CvSideSectionGroup[] = CV_SIDE_SECTION_COLLECTION;
 
   public exportToPdf(): void {
     const DATA: HTMLElement | null = document.getElementById('cv');

@@ -1,11 +1,12 @@
-<ui-title-and-icon
-  [title]="titleAndIcon.title"
-  [iconName]="titleAndIcon.icon"
-></ui-title-and-icon>
-<!-- <ui-list
-*ngFor="let key of columnsKeys"
-[hasParting]="!checkIsLastList(key)"
-[subPointWidth]="'200px'"
-[points]="data.subPoints[key]"
-></ui-list>
- -->
+<div class="container">
+  <ui-title-and-icon
+    [title]="cvSection.title"
+    [iconName]="cvSection.icon"
+  ></ui-title-and-icon>
+
+  <ui-list
+    [hasParting]="hasParting"
+    [subPointWidth]="'200px'"
+    [points]="cvSection.listItem"
+  ></ui-list>
+</div>

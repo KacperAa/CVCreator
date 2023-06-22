@@ -9,7 +9,7 @@ import { CvEditorComponent } from './components/cv-editor/cv-editor.component';
 import { MatButtonModule } from '@angular/material/button';
 import { CvHeaderComponent } from './components/cv-header/cv-header.component';
 import { LargeSmallTextComponent } from './UI/atoms/large-small-text/large-small-text.atom';
-import { EmailAndTelComponent } from './components/email-and-tel/email-and-tel.component';
+import { HeaderCvInformationComponent } from './components/header-cv-information/header-cv-information.component';
 import { CvSectionComponent } from './components/cv-section/cv-section.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -28,7 +28,7 @@ import { TitleIconListComponent } from './components/title-icon-list/title-icon-
     CvEditorComponent,
     CvHeaderComponent,
     LargeSmallTextComponent,
-    EmailAndTelComponent,
+    HeaderCvInformationComponent,
     CvSectionComponent,
     CvSummaryComponent,
     TitleAndIconComponent,

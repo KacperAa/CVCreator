@@ -5,10 +5,11 @@
         [largeText]="headerData.nickname"
         [smallText]="headerData.workplace"
       ></ui-large-small-text>
-      <app-email-and-tel
+      <app-header-cv-information
         [email]="headerData.email"
         [tel]="headerData.tel"
-      ></app-email-and-tel>
+        [gitLink]="headerData.gitLink"
+      ></app-header-cv-information>
     </div>
     <img class="profile-image" [src]="headerData.imgSrc" alt="profile-image" />
   </div>

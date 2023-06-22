@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CvSideSection } from 'src/app/interfaces/cv-side-section.interface';
+import { CvSideSectionGroup } from 'src/app/interfaces/cv-side-section.group.interface';
 
 @Component({
   selector: 'app-cv-side-section',
@@ -8,15 +9,12 @@ import { CvSideSection } from 'src/app/interfaces/cv-side-section.interface';
 })
 export class CvSideSectionComponent {
   @Input({ required: true })
-  public data!: CvSideSection;
+  public data!: CvSideSectionGroup;
 
-  public get columnsKeys(): string[] {
-    return Object.keys(this.data.subPoints);
-  }
+  public isLastColumn(column: CvSideSection): boolean {
+    const lastIndex = this.data.cvSection.length - 1;
+    const columnIndex = this.data.cvSection.indexOf(column);
 
-  public checkIsLastList(columnKey: string): boolean {
-    const isLastElement =
-      this.columnsKeys.indexOf(columnKey) === this.columnsKeys.length - 1;
-    return isLastElement;
+    return columnIndex === lastIndex;
   }
 }

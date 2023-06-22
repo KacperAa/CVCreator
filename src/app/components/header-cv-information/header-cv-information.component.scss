@@ -4,4 +4,10 @@
   flex-wrap: wrap;
   flex-direction: row;
   gap: 50px;
+
+  .email-and-git-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 }

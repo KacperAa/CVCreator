@@ -1,8 +1,5 @@
 import { Component, Input } from '@angular/core';
-import {
-  CvSideSection,
-  IconAndTitle,
-} from 'src/app/interfaces/cv-side-section.interface';
+import { CvSideSection } from 'src/app/interfaces/cv-side-section.interface';
 
 @Component({
   selector: 'app-title-icon-list',
@@ -10,8 +7,8 @@ import {
   styleUrls: ['./title-icon-list.component.scss'],
 })
 export class TitleIconListComponent {
-  @Input()
-  public titleAndIcon!: IconAndTitle;
-  @Input()
-  public listData: any;
+  @Input({ required: true })
+  public cvSection!: CvSideSection;
+  @Input({ required: false })
+  public hasParting: boolean = false;
 }

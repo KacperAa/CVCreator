@@ -1,22 +1,10 @@
 <div class="container">
-  <div class="titles-and-icons-box">
+  <div class="section-box">
     <app-title-icon-list
-      *ngFor="let titleAndIcon of data.iconAndTitle"
-      [titleAndIcon]="titleAndIcon"
+      *ngFor="let cvSection of data.cvSection"
+      [cvSection]="cvSection"
+      [hasParting]="!isLastColumn(cvSection)"
     ></app-title-icon-list>
-    <!--   <ui-title-and-icon
-      *ngFor="let iconAndTitle of data.iconAndTitle"
-      [title]="iconAndTitle.title"
-      [iconName]="iconAndTitle.icon"
-    ></ui-title-and-icon>
-  </div>
-  <div class="lists-box">
-    <ui-list
-      *ngFor="let key of columnsKeys"
-      [hasParting]="!checkIsLastList(key)"
-      [subPointWidth]="'200px'"
-      [points]="data.subPoints[key]"
-    ></ui-list> -->
   </div>
   <div class="border"></div>
 </div>
