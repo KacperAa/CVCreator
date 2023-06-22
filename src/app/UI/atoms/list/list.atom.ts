@@ -10,4 +10,8 @@ export class ListComponent {
   public points!: string[];
   @Input({ required: false })
   public subPointWidth!: string;
+  @Input({ required: false })
+  public hasParting: boolean = false;
+
+  public isNotLastEl() {}
 }

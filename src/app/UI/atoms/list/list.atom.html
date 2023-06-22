@@ -1,8 +1,11 @@
 <div class="container">
-  <li *ngFor="let point of points" class="list-item">
-    <mat-icon>task_alt</mat-icon
-    ><span class="list-item__text" [ngStyle]="{width: subPointWidth}"
-      >{{ point }}</span
-    >
-  </li>
+  <div>
+    <li *ngFor="let point of points" class="list-item">
+      <mat-icon>task_alt</mat-icon
+      ><span class="list-item__text" [ngStyle]="{width: subPointWidth}"
+        >{{ point }}</span
+      >
+    </li>
+  </div>
+  <div class="parting" *ngIf="hasParting"></div>
 </div>

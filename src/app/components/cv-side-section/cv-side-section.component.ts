@@ -9,4 +9,14 @@ import { CvSideSection } from 'src/app/interfaces/cv-side-section.interface';
 export class CvSideSectionComponent {
   @Input({ required: true })
   public data!: CvSideSection;
+
+  public get columnsKeys(): string[] {
+    return Object.keys(this.data.subPoints);
+  }
+
+  public checkIsLastList(columnKey: string): boolean {
+    const isLastElement =
+      this.columnsKeys.indexOf(columnKey) === this.columnsKeys.length - 1;
+    return isLastElement;
+  }
 }

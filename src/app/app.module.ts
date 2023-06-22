@@ -18,6 +18,7 @@ import { TitleAndIconComponent } from './UI/atoms/title-and-icon/title-and-icon.
 import { CvSideSectionComponent } from './components/cv-side-section/cv-side-section.component';
 import { ListComponent } from './UI/atoms/list/list.atom';
 import { TestComponent } from './components/test/test.component';
+import { TitleIconListComponent } from './components/title-icon-list/title-icon-list.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { TestComponent } from './components/test/test.component';
     CvSideSectionComponent,
     ListComponent,
     TestComponent,
+    TitleIconListComponent,
   ],
   imports: [
     BrowserModule,

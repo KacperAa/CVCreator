@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { LargeSmallText } from 'src/app/interfaces/large-small-text.interface';
 
 @Component({
   selector: 'app-cv-summary',
@@ -8,5 +7,5 @@ import { LargeSmallText } from 'src/app/interfaces/large-small-text.interface';
 })
 export class CvSummaryComponent {
   @Input({ required: true })
-  public text!: LargeSmallText;
+  public text!: string;
 }

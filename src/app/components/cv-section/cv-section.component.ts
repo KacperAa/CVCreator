@@ -14,4 +14,10 @@ export class CvSectionComponent {
   public get columnsKeys(): string[] {
     return Object.keys(this.data.subPoints);
   }
+
+  public checkIsLastList(columnKey: string): boolean {
+    const isLastElement =
+      this.columnsKeys.indexOf(columnKey) === this.columnsKeys.length - 1;
+    return isLastElement;
+  }
 }
