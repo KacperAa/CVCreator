@@ -18,7 +18,7 @@ export class CvComponent {
   public cvHeader: CvHeader = CV_HEADER;
   public summaryText: string = SUMMARY_TEXT;
   public cvSections: CvSection[] = CV_SECTIONS;
-  public cvSideSections: CvSideSectionGroup[] = CV_SIDE_SECTION_COLLECTION;
+  public cvSideSectionsGroup: CvSideSectionGroup[] = CV_SIDE_SECTION_COLLECTION;
 
   public exportToPdf(): void {
     const DATA: HTMLElement | null = document.getElementById('cv');

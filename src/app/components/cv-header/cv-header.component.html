@@ -1,6 +1,6 @@
-<section class="container">
+<header class="container">
   <div class="text-and-image-box">
-    <div class="text-box">
+    <div class="text-and-image-box__text-box">
       <ui-large-small-text
         [largeText]="headerData.nickname"
         [smallText]="headerData.workplace"
@@ -11,6 +11,6 @@
         [gitLink]="headerData.gitLink"
       ></app-header-cv-information>
     </div>
-    <img class="profile-image" [src]="headerData.imgSrc" alt="profile-image" />
+    <img class="text-and-image-box__profile-image" [src]="headerData.imgSrc" />
   </div>
-</section>
+</header>

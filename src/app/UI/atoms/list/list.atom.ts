@@ -12,6 +12,4 @@ export class ListComponent {
   public subPointWidth!: string;
   @Input({ required: false })
   public hasParting: boolean = false;
-
-  public isNotLastEl() {}
 }

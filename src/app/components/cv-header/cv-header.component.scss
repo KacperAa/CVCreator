@@ -14,19 +14,18 @@
     flex-direction: row;
     position: relative;
 
-    .text-box {
+    &__text-box {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       padding-right: 50px;
     }
-  }
-
-  .profile-image {
-    width: 130px;
-    height: 180px;
-    border-radius: 10px;
-    position: relative;
+    &__profile-image {
+      width: 130px;
+      height: 180px;
+      border-radius: 10px;
+      position: relative;
+    }
   }
 }
 

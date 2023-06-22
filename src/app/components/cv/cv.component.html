@@ -1,4 +1,4 @@
-<div class="container">
+<section class="container">
   <button (click)="exportToPdf()" mat-raised-button color="accent">
     Export to pdf
   </button>
@@ -10,9 +10,9 @@
       [data]="section"
     ></app-cv-section>
     <app-cv-side-section
-      *ngFor="let cvSideSection of cvSideSections"
+      *ngFor="let cvSideSection of cvSideSectionsGroup"
       [data]="cvSideSection"
     ></app-cv-side-section>
     <app-test></app-test>
   </div>
-</div>
+</section>

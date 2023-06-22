@@ -9,13 +9,12 @@ import { CvSection } from 'src/app/interfaces/cv-section.interface';
 export class CvSectionComponent {
   @Input()
   public data!: CvSection;
-  @Input()
-  public iconsSrc!: string[];
+
   public get columnsKeys(): string[] {
     return Object.keys(this.data.subPoints);
   }
 
-  public checkIsLastList(columnKey: string): boolean {
+  public checkIsLastColumn(columnKey: string): boolean {
     const isLastElement =
       this.columnsKeys.indexOf(columnKey) === this.columnsKeys.length - 1;
     return isLastElement;

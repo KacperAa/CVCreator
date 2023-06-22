@@ -11,7 +11,7 @@
   <div class="lists-box">
     <ng-container *ngFor="let key of columnsKeys">
       <ui-list
-        [hasParting]="!checkIsLastList(key)"
+        [hasParting]="!checkIsLastColumn(key)"
         [subPointWidth]="'150px'"
         [points]="data.subPoints[key]"
       ></ui-list>
