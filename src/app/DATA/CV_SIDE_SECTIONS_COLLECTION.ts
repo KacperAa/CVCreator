@@ -4,23 +4,23 @@ export const CV_SIDE_SECTION_COLLECTION: CvSideSectionGroup[] = [
   {
     cvSection: [
       {
-        title: 'Pozostałe umiejętności',
+        title: 'Additional skills',
         icon: 'star',
         listItem: [
-          'Pracowitość i zaangażowanie',
-          'Umiejętność szybkiego uczenia się',
-          'Umiejętność skupienia się',
-          'Dbałość o detale',
-          'Umiejętność pracy w zespole',
-          'Sumienność',
+          'Diligence and commitment',
+          'Quick learning ability',
+          'Ability to focus',
+          'Attention to detail',
+          'Teamwork skills',
+          'Conscientiousness',
         ],
       },
       {
-        title: 'Wykształcenie',
+        title: 'Education',
         icon: 'school',
         listItem: [
-          'Liceum Ogólnokształcące im. Marii Skłodowskiej-Cuire w Kołaczycach',
-          'Zarządzanie, Studia licencjackie - Politechnika Rzeszowska im. Ignacego Łukasiewicza',
+          'Maria Skłodowska-Curie General Secondary School in Kołaczyce',
+          "Management, Bachelor's degree - Rzeszow University of Technology",
         ],
       },
     ],
@@ -28,17 +28,17 @@ export const CV_SIDE_SECTION_COLLECTION: CvSideSectionGroup[] = [
   {
     cvSection: [
       {
-        title: 'Doświadczenie',
+        title: 'Experience',
         icon: 'workspace_premium',
         listItem: [
-          'Praktyki studenckie',
-          'Promotor wiedzy na temat treningów siłowych',
-          'Trener personalny non profit',
-          'Praca dorywcza za granicą',
+          'Student internships',
+          'Strength training knowledge promoter',
+          'Non-profit personal trainer',
+          'Temporary work abroad',
         ],
       },
       {
-        title: 'Kursy',
+        title: 'Courses',
         icon: 'book',
         listItem: [
           'Angular - kompletny kurs od podstaw - edycja na rok 2021',
@@ -51,15 +51,15 @@ export const CV_SIDE_SECTION_COLLECTION: CvSideSectionGroup[] = [
   {
     cvSection: [
       {
-        title: 'Zainteresowania',
+        title: 'Interests',
         icon: 'hiking',
         listItem: [
           'Angular',
-          'Trening siłowy',
-          'Gra na gitarze',
-          'Samorozwój',
-          'Czytanie książek',
-          'Gotowanie',
+          'Weightlifting',
+          'Playing the guitar',
+          'Self-development',
+          'Reading books',
+          'Cooking',
         ],
       },
     ],
