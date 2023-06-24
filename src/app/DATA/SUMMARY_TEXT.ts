@@ -1,2 +1,2 @@
 export const SUMMARY_TEXT: string =
-  'Jestem studentem zarządzania i osobą, która aktywnie rozwija swoje zainteresowanie, jakim jest programowanie front-endowe. Cechuję się nieustanną chęcią rozwoju jako programista i wykorzystuję każdą okazję, aby nauczyć się czegoś nowego. Pragnę wykorzystać swoje umiejętności, aby wspomóc zespół programistów Państwa firmy.';
+  'I am a management student and an individual who actively pursues my interest in front-end programming. I am characterized by a constant desire for development as a programmer and I seize every opportunity to learn something new. I would like to utilize my skills to provide support to the team of programmers in your esteemed company.';
