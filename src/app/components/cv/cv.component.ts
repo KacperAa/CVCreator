@@ -22,13 +22,15 @@ export class CvComponent {
 
   public exportToPdf(): void {
     const DATA: HTMLElement | null = document.getElementById('cv');
-    html2canvas(DATA as HTMLElement, { scale: 5 }).then((canvas) => {
+    html2canvas(DATA as HTMLElement, { scale: 1 }).then((canvas) => {
       const fileWidth = 211;
       const fileHeight = (canvas.height * fileWidth) / canvas.width;
       const imgFormat = canvas.toDataURL('image/png');
       const pdf = new jsPDF('p', 'mm', 'a4');
       let position = 0;
       const pageHeight = pdf.internal.pageSize.getHeight();
+
+      this._addLinksToPdf(pdf);
 
       // Calculate the number of pages
       const totalPages = Math.ceil(fileHeight / pageHeight);
@@ -46,5 +48,9 @@ export class CvComponent {
 
       pdf.save('CV.pdf');
     });
+  }
+
+  private _addLinksToPdf(pdf: jsPDF): void {
+    pdf.link(8, 60, 70, 7, { url: 'https://github.com/KacperAa' }); //git
   }
 }
