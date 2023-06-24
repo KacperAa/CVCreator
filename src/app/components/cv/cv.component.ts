@@ -25,27 +25,26 @@ export class CvComponent {
     html2canvas(DATA as HTMLElement, { scale: 5 }).then((canvas) => {
       const fileWidth = 211;
       const fileHeight = (canvas.height * fileWidth) / canvas.width;
-      const FILEURI = canvas.toDataURL('image/png');
-      const PDF = new jsPDF('p', 'mm', 'a4');
+      const imgFormat = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('p', 'mm', 'a4');
       let position = 0;
-      const pageHeight = PDF.internal.pageSize.getHeight();
+      const pageHeight = pdf.internal.pageSize.getHeight();
 
-      // Oblicz liczbę stron na podstawie wysokości obrazu i wysokości strony
+      // Calculate the number of pages
       const totalPages = Math.ceil(fileHeight / pageHeight);
 
-      // Iteruj przez każdą stronę i dodaj obraz
+      // Literate the page and add content to it
       for (let pageNumber = 0; pageNumber < totalPages; pageNumber++) {
         if (pageNumber > 0) {
-          PDF.addPage(); // Dodaj nową stronę dla każdej strony oprócz pierwszej
+          pdf.addPage(); // Add a new page for each page except the first
         }
-        // Oblicz pozycję dla każdej strony
+        // Calculate the positions for each page
         position = -pageNumber * pageHeight;
 
-        // Dodaj obraz na aktualną stronę
-        PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight);
+        pdf.addImage(imgFormat, 'PNG', 0, position, fileWidth, fileHeight);
       }
 
-      /* PDF.save('angular-demo.pdf'); */
+      pdf.save('CV.pdf');
     });
   }
 }

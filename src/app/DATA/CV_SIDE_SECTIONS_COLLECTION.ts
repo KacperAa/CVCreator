@@ -65,8 +65,8 @@ export const CV_SIDE_SECTION_COLLECTION: CvSideSectionGroup[] = [
   {
     cvSection: [
       {
-        title: 'Interests',
-        icon: 'hiking',
+        title: 'Hobbies',
+        icon: 'fitness_center',
         listItem: [
           { text: 'Angular' },
           { text: 'Weightlifting' },
