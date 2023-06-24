@@ -8,7 +8,7 @@ export const CV_SIDE_SECTION_COLLECTION: CvSideSectionGroup[] = [
         title: 'Additional skills',
         icon: 'star',
         listItem: [
-          { text: 'English language', image: Flags.English },
+          { text: 'English language - B1', image: Flags.English },
           { text: 'Diligence and commitment' },
           { text: 'Quick learning ability' },
           { text: 'Ability to focus' },

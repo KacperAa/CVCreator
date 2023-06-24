@@ -21,7 +21,6 @@ export const CV_SECTIONS: CvSection[] = [
         { text: 'RxJs' },
         { text: 'Pipes' },
         { text: 'Reusability' },
-        { text: 'Dependency Injection' },
         { text: 'Lifecycle hooks' },
         { text: 'Services' },
         { text: 'Routing module' },
