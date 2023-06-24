@@ -22,28 +22,30 @@ export class CvComponent {
 
   public exportToPdf(): void {
     const DATA: HTMLElement | null = document.getElementById('cv');
-    html2canvas(DATA as HTMLElement, { scale: 5 }) // Increasing the image resolution
-      .then((canvas: HTMLCanvasElement) => {
-        const fileWidth = 210;
-        const fileHeight = (canvas.height * fileWidth) / canvas.width;
+    html2canvas(DATA as HTMLElement, { scale: 5 }).then((canvas) => {
+      const fileWidth = 211;
+      const fileHeight = (canvas.height * fileWidth) / canvas.width;
+      const FILEURI = canvas.toDataURL('image/png');
+      const PDF = new jsPDF('p', 'mm', 'a4');
+      let position = 0;
+      const pageHeight = PDF.internal.pageSize.getHeight();
 
-        const toJpeg = canvas.toDataURL('image/jpeg'); // JPEG format
-        const pdf = new jsPDF('p', 'mm', [210, fileHeight + 10]); // Page height reduction
-        let position = 0;
-        const pageHeight = pdf.internal.pageSize.getHeight();
+      // Oblicz liczbę stron na podstawie wysokości obrazu i wysokości strony
+      const totalPages = Math.ceil(fileHeight / pageHeight);
 
-        const totalPages = Math.ceil(fileHeight / pageHeight);
-
-        for (let pageNumber = 0; pageNumber < totalPages; pageNumber++) {
-          if (pageNumber > 0) {
-            pdf.addPage();
-          }
-          position = -pageNumber * pageHeight;
-
-          pdf.addImage(toJpeg, 'JPEG', 0, position, fileWidth, fileHeight);
+      // Iteruj przez każdą stronę i dodaj obraz
+      for (let pageNumber = 0; pageNumber < totalPages; pageNumber++) {
+        if (pageNumber > 0) {
+          PDF.addPage(); // Dodaj nową stronę dla każdej strony oprócz pierwszej
         }
+        // Oblicz pozycję dla każdej strony
+        position = -pageNumber * pageHeight;
 
-        /*    pdf.save('cv.pdf'); */
-      });
+        // Dodaj obraz na aktualną stronę
+        PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight);
+      }
+
+      /* PDF.save('angular-demo.pdf'); */
+    });
   }
 }
