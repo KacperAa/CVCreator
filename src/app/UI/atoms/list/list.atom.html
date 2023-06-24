@@ -1,14 +1,26 @@
 <div class="container">
   <div>
     <li *ngFor="let point of points" class="list-item">
-      <mat-icon>task_alt</mat-icon
-      ><span class="text-and-image-box" [ngStyle]="{width: subPointWidth}"
-        >{{ point.text }}
-        <img
-          *ngIf="point.image !== undefined"
-          class="text-and-image-box__image"
-          [src]="point.image" /></span
-      ><span class="additional-text">{{point.additionalText}}</span>
+      <mat-icon>task_alt</mat-icon>
+      <div
+        class="list-content"
+        [style.width]="hasAdditionalContent(point) ? '60%' : '100%'"
+        [ngStyle]="{width: subPointWidth}"
+      >
+        <span class="text">{{ point.text }} </span>
+        <div
+          *ngIf="point.image !== undefined || point.additionalText !== undefined"
+          class="additional-elements"
+        >
+          <img
+            *ngIf="point.image !== undefined"
+            class="additional-elements__image"
+            [src]="point.image"
+          /><span class="additional-elements__little-text"
+            >{{point.additionalText}}</span
+          >
+        </div>
+      </div>
     </li>
   </div>
   <div class="parting" *ngIf="hasParting"></div>

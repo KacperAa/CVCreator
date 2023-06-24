@@ -8,25 +8,33 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 12px;
 
-    .text-and-image-box {
-      line-height: 1.2;
+    .list-content {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      gap: 5px;
 
-      &__image {
-        border: 1px solid rgb(190, 190, 190);
-        height: 15px;
+      .text {
+        line-height: 1.2;
+        display: flex;
+        font-size: 12px;
       }
-    }
 
-    .additional-text {
-      font-weight: 600;
-      font-size: 8px;
-      position: absolute;
-      right: 10px;
+      .additional-elements {
+        display: flex;
+        justify-content: flex-end;
+        width: 40%;
+
+        &__image {
+          height: 15px;
+          border: 1px solid rgb(190, 190, 190);
+        }
+
+        &__little-text {
+          font-size: 8px;
+          font-weight: 600;
+        }
+      }
     }
   }
 

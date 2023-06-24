@@ -13,4 +13,10 @@ export class ListComponent {
   public subPointWidth!: string;
   @Input({ required: false })
   public hasParting: boolean = false;
+
+  public hasAdditionalContent(point: ListItem): boolean {
+    return point.additionalText !== undefined || point.image !== undefined
+      ? true
+      : false;
+  }
 }
