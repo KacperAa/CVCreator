@@ -24,25 +24,26 @@ export class CvComponent {
     const DATA: HTMLElement | null = document.getElementById('cv');
     html2canvas(DATA as HTMLElement, { scale: 5 }) // Increasing the image resolution
       .then((canvas: HTMLCanvasElement) => {
-        const fileWidth = 218.2;
+        const fileWidth = 210;
         const fileHeight = (canvas.height * fileWidth) / canvas.width;
+
         const toJpeg = canvas.toDataURL('image/jpeg'); // JPEG format
         const pdf = new jsPDF('p', 'mm', [210, fileHeight + 10]); // Page height reduction
         let position = 0;
-        /* const pageHeight = pdf.internal.pageSize.getHeight(); */
-        /* 
-        const totalPages = Math.ceil(fileHeight / pageHeight); */
+        const pageHeight = pdf.internal.pageSize.getHeight();
 
-        /*    for (let pageNumber = 0; pageNumber < totalPages; pageNumber++) {
+        const totalPages = Math.ceil(fileHeight / pageHeight);
+
+        for (let pageNumber = 0; pageNumber < totalPages; pageNumber++) {
           if (pageNumber > 0) {
             pdf.addPage();
-          } */
-        /*  position = -pageNumber * pageHeight; */
+          }
+          position = -pageNumber * pageHeight;
 
-        pdf.addImage(toJpeg, 'JPEG', 0, position, fileWidth, fileHeight);
-        /*  } */
+          pdf.addImage(toJpeg, 'JPEG', 0, position, fileWidth, fileHeight);
+        }
 
-        pdf.save('cv.pdf');
+        /*    pdf.save('cv.pdf'); */
       });
   }
 }

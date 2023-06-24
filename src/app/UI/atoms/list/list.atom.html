@@ -2,10 +2,14 @@
   <div>
     <li *ngFor="let point of points" class="list-item">
       <mat-icon>task_alt</mat-icon
-      ><span class="list-item__text" [ngStyle]="{width: subPointWidth}"
-        >{{ point }}</span
-      >
+      ><span class="text-and-image-box" [ngStyle]="{width: subPointWidth}"
+        >{{ point.text }}
+        <img
+          *ngIf="point.image !== undefined"
+          class="text-and-image-box__image"
+          [src]="point.image" /></span
+      ><span class="additional-text">{{point.additionalText}}</span>
     </li>
   </div>
-  <div class="list-item__parting" *ngIf="hasParting"></div>
+  <div class="parting" *ngIf="hasParting"></div>
 </div>

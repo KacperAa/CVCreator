@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ListItem } from 'src/app/interfaces/cv-side-section.interface';
 
 @Component({
   selector: 'ui-list',
@@ -7,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ListComponent {
   @Input({ required: true })
-  public points!: string[];
+  public points!: ListItem[];
   @Input({ required: false })
   public subPointWidth!: string;
   @Input({ required: false })
