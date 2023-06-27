@@ -22,11 +22,16 @@ export class CvComponent {
 
   public exportToPdf(): void {
     const DATA: HTMLElement | null = document.getElementById('cv');
-    html2canvas(DATA as HTMLElement, { scale: 1 }).then((canvas) => {
-      const fileWidth = 211;
+    html2canvas(DATA as HTMLElement, { scale: 6.5 }).then((canvas) => {
+      const fileWidth = 210;
       const fileHeight = (canvas.height * fileWidth) / canvas.width;
       const imgFormat = canvas.toDataURL('image/png');
-      const pdf = new jsPDF('p', 'mm', 'a4');
+
+      const pdf = new jsPDF({
+        orientation: 'p',
+        unit: 'mm',
+        format: 'a4',
+      });
       let position = 0;
       const pageHeight = pdf.internal.pageSize.getHeight();
 
