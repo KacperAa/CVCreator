@@ -19,6 +19,7 @@ import { CvSideSectionComponent } from './components/cv-side-section/cv-side-sec
 import { ListComponent } from './UI/atoms/list/list.atom';
 import { CvFooterComponent } from './components/cv-footer/cv-footer.component';
 import { TitleIconListComponent } from './components/title-icon-list/title-icon-list.component';
+import { PartingDirective } from './Directives/parting.directive';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { TitleIconListComponent } from './components/title-icon-list/title-icon-
     ListComponent,
     CvFooterComponent,
     TitleIconListComponent,
+    PartingDirective,
   ],
   imports: [
     BrowserModule,
